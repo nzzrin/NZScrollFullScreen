@@ -412,6 +412,7 @@
 				2ED5C0FC1A10A53D00C1F11B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ED5C0FD1A10A53D00C1F11B /* Build configuration list for PBXNativeTarget "NZScrollFullScreenTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				2ED5C0FF1A10A53D00C1F11B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

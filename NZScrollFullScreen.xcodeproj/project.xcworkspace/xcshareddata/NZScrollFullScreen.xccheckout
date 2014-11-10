@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E54A151E-C8E9-4E09-9E4C-CCEFE3B9E830</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NZScrollFullScreen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D561430B25408342A5012E7A54A5DC0F1B4E5967</key>
+		<string>https://github.com/nzzrin/NZScrollFullScreen.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NZScrollFullScreen.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D561430B25408342A5012E7A54A5DC0F1B4E5967</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nzzrin/NZScrollFullScreen.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D561430B25408342A5012E7A54A5DC0F1B4E5967</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D561430B25408342A5012E7A54A5DC0F1B4E5967</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NZScrollFullScreen</string>
+		</dict>
+	</array>
+</dict>
+</plist>

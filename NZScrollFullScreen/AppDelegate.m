@@ -17,6 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                               [UIColor whiteColor],
+                                               NSForegroundColorAttributeName,
+                                               [UIFont fontWithName:@"Helvetica-Light" size:20.0],
+                                               NSFontAttributeName,
+                                               nil];
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 

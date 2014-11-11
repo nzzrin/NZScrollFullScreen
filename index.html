@@ -1,33 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
     <title>Nzscrollfullscreen by nzzrin</title>
-  </head>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+  </head>
   <body>
 
-    <header>
-      <div class="container">
+      <header>
         <h1>Nzscrollfullscreen</h1>
-        <h2>Full screen view while scrolling UIView.</h2>
+        <p>Full screen view while scrolling UIView.</p>
+      </header>
 
-        <section id="downloads">
-          <a href="https://github.com/nzzrin/NZScrollFullScreen/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/nzzrin/NZScrollFullScreen/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/nzzrin/NZScrollFullScreen" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+      <div id="banner">
+        <span id="logo"></span>
 
-    <div class="container">
-      <section id="main_content">
+        <a href="https://github.com/nzzrin/NZScrollFullScreen" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/nzzrin/NZScrollFullScreen/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/nzzrin/NZScrollFullScreen/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
         <h3>
 <a id="nzscrollfullscreen" class="anchor" href="#nzscrollfullscreen" aria-hidden="true"><span class="octicon octicon-link"></span></a>NZScrollFullScreen</h3>
 
@@ -35,9 +46,16 @@
 
 <h3>
 <a id="in-action" class="anchor" href="#in-action" aria-hidden="true"><span class="octicon octicon-link"></span></a>In Action:</h3>
-      </section>
-    </div>
 
+<p><img src="http://lh3.googleusercontent.com/-6jy7Q48l9LA/VGGBuHxlp0I/AAAAAAAACyc/51rm69YODTM/w334-h593-no/iOS%2BSimulator%2BScreen%2BShot%2BNov%2B11%2C%2B2014%2C%2B11.24.42%2BAM.png" alt="Table">
+<img src="http://lh5.googleusercontent.com/-R1lUHf4A5Wk/VGGBuP7HhoI/AAAAAAAACyg/MczGru5E-Tg/w334-h593-no/iOS%2BSimulator%2BScreen%2BShot%2BNov%2B11%2C%2B2014%2C%2B11.24.46%2BAM.png" alt="Table Full"></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/nzzrin">nzzrin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>

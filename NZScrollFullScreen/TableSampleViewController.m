@@ -13,6 +13,20 @@
 #import "UITabBarController+hidable.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
 @interface TableSampleViewController ()
 
 @end
@@ -59,9 +73,23 @@
     self.scrolly.delegate = self;
     [scrolly setScrollEnabled:YES];
     
-    [scrolly setContentSize:CGSizeMake(280, 1280+64) ];
-    scrolly.frame = CGRectMake(0, 0, scrolly.frame.size.width, 568+44);
-    tableLoad.frame = CGRectMake(0, 0, tableLoad.frame.size.width, 1280+64);
+    if(IS_IPHONE_6){
+        
+        [scrolly setContentSize:CGSizeMake(280, 1900+64) ];
+        scrolly.frame = CGRectMake(0, 0, 750, 1280+44);
+        tableLoad.frame = CGRectMake(0, 0, 750, 1280+64);
+        
+    }else if(IS_IPHONE_6P){
+        
+        [scrolly setContentSize:CGSizeMake(280, 1920+64) ];
+        scrolly.frame = CGRectMake(0, 0, 1080, 1280+44);
+        tableLoad.frame = CGRectMake(0, 0, 1080, 1280+64);
+        
+    }else{
+        [scrolly setContentSize:CGSizeMake(280, 1280+64) ];
+        scrolly.frame = CGRectMake(0, 0, scrolly.frame.size.width, 568+44);
+        tableLoad.frame = CGRectMake(0, 0, tableLoad.frame.size.width, 1280+64);
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -100,7 +128,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell: %d", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell: %ld", (long)indexPath.row];
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Light" size:18.0];
     cell.textLabel.textColor = [UIColor darkGrayColor];
     

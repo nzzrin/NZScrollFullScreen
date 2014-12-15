@@ -8,6 +8,20 @@
 
 #import "DetailViewController.h"
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
 @interface DetailViewController ()
 
 @end
@@ -26,6 +40,20 @@
     NSString *inStr = [NSString stringWithFormat: @"%ld", (long)setInt];
     
     countLabel.text = inStr;
+    
+    if(IS_IPHONE_6){
+        
+        countLabel.frame = CGRectMake(43, 209, 288, 249);
+        
+    }else if(IS_IPHONE_6P){
+        
+        countLabel.frame = CGRectMake(63, 243, 288, 249);
+        
+    }else{
+        
+        countLabel.frame = CGRectMake(16, 159, 288, 249);
+        
+    }
     // Do any additional setup after loading the view.
     
 }
@@ -34,15 +62,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

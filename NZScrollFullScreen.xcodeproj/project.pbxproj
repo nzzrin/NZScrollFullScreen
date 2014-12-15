@@ -25,6 +25,10 @@
 		2ED5C1051A10A8F700C1F11B /* ViewSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5C1041A10A8F700C1F11B /* ViewSampleViewController.m */; };
 		2ED5C10F1A10ABA400C1F11B /* HideNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5C10C1A10ABA400C1F11B /* HideNavViewController.m */; };
 		2ED5C1101A10ABA400C1F11B /* UITabBarController+hidable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED5C10E1A10ABA400C1F11B /* UITabBarController+hidable.m */; };
+		99E73AFB1A3E965900E050A5 /* iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E73AF81A3E965900E050A5 /* iphone4.png */; };
+		99E73AFC1A3E965900E050A5 /* iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E73AF91A3E965900E050A5 /* iphone5.png */; };
+		99E73AFD1A3E965900E050A5 /* iphone6.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E73AFA1A3E965900E050A5 /* iphone6.png */; };
+		99E73AFF1A3E992B00E050A5 /* iphone6p.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E73AFE1A3E992B00E050A5 /* iphone6p.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		2ED5C10C1A10ABA400C1F11B /* HideNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideNavViewController.m; sourceTree = "<group>"; };
 		2ED5C10D1A10ABA400C1F11B /* UITabBarController+hidable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+hidable.h"; sourceTree = "<group>"; };
 		2ED5C10E1A10ABA400C1F11B /* UITabBarController+hidable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+hidable.m"; sourceTree = "<group>"; };
+		99E73AF81A3E965900E050A5 /* iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone4.png; sourceTree = "<group>"; };
+		99E73AF91A3E965900E050A5 /* iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone5.png; sourceTree = "<group>"; };
+		99E73AFA1A3E965900E050A5 /* iphone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6.png; sourceTree = "<group>"; };
+		99E73AFE1A3E992B00E050A5 /* iphone6p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6p.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,10 @@
 		2E29FB561A10C2AC00BB457E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				99E73AFE1A3E992B00E050A5 /* iphone6p.png */,
+				99E73AF81A3E965900E050A5 /* iphone4.png */,
+				99E73AF91A3E965900E050A5 /* iphone5.png */,
+				99E73AFA1A3E965900E050A5 /* iphone6.png */,
 				2E29FB571A10C2AC00BB457E /* icoTable@2x.png */,
 				2E29FB581A10C2AC00BB457E /* icoView@2x.png */,
 				2E29FB591A10C2AC00BB457E /* navigationbar_background_tall.png */,
@@ -263,8 +275,12 @@
 				2ED5C0E61A10A53D00C1F11B /* Main.storyboard in Resources */,
 				2ED5C0EB1A10A53D00C1F11B /* LaunchScreen.xib in Resources */,
 				2ED5C0E81A10A53D00C1F11B /* Images.xcassets in Resources */,
+				99E73AFF1A3E992B00E050A5 /* iphone6p.png in Resources */,
 				2E29FB5E1A10C2AC00BB457E /* navigationbar_background_tall@2x.png in Resources */,
+				99E73AFB1A3E965900E050A5 /* iphone4.png in Resources */,
 				2E29FB5B1A10C2AC00BB457E /* icoTable@2x.png in Resources */,
+				99E73AFD1A3E965900E050A5 /* iphone6.png in Resources */,
+				99E73AFC1A3E965900E050A5 /* iphone5.png in Resources */,
 				2E29FB5C1A10C2AC00BB457E /* icoView@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

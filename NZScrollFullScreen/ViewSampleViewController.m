@@ -12,6 +12,20 @@
 #import "UITabBarController+hidable.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
 @interface ViewSampleViewController ()
 
 @end
@@ -23,7 +37,7 @@
     CGFloat lastContentOffset;
     BOOL hidden;
 }
-
+@synthesize subText;
 @synthesize scrolly;
 
 - (void)viewWillAppear:(BOOL)animated
@@ -52,8 +66,22 @@
     self.scrolly.delegate = self;
     [scrolly setScrollEnabled:YES];
     
-    [scrolly setContentSize:CGSizeMake(280, 1280+64) ];
-    scrolly.frame = CGRectMake(0, 0, scrolly.frame.size.width, 568+44);
+    if(IS_IPHONE_6){
+        
+        subText.frame = CGRectMake(8, 5, 360, 1032);
+        [scrolly setContentSize:CGSizeMake(280, 1032+64) ];
+        scrolly.frame = CGRectMake(0, 0, 750, 667+44);
+        
+    }else if(IS_IPHONE_6P){
+        
+        subText.frame = CGRectMake(8, 5, 395, 926);
+        [scrolly setContentSize:CGSizeMake(280, 926+64) ];
+        scrolly.frame = CGRectMake(0, 0, 1080, 736+44);
+        
+    }else{
+        [scrolly setContentSize:CGSizeMake(280, 1280+64) ];
+        scrolly.frame = CGRectMake(0, 0, scrolly.frame.size.width, 568+44);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

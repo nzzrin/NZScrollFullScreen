@@ -28,6 +28,9 @@
     
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
+    [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:NO];
+    [NSThread sleepForTimeInterval:1.0];
+    
     return YES;
 }
 

@@ -11,5 +11,6 @@
 @interface ViewSampleViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrolly;
+@property (weak, nonatomic) IBOutlet UILabel *subText;
 
 @end
